@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -27,8 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="30dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -44,16 +45,30 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
                     <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
+                        android:text="HP:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HP1"
+                        android:layout_weight="0.45" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:id="@+id/pokemon1Hp" />
+                        android:id="@+id/pokemon1Hp"
+                        android:layout_weight="0.32" />
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wildHP" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -93,8 +108,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="40dp">
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -116,12 +131,48 @@
                     android:layout_weight="1" >
 
                     <TextView
-                        android:layout_width="169dp"
-                        android:layout_height="fill_parent"
+                        android:text="HP:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HP2"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:id="@+id/pokemon2Hp" />
+                        android:id="@+id/pokemon2Hp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mainHP"
+                        android:layout_weight="1" />
+
                 </LinearLayout>
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:text="Attack Loremp Ipsum no namae wa tahino otzaru kiramaniri"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/battleText"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,8 +196,8 @@
                     <Button
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:text="Attack"
-                        android:id="@+id/button3" />
+                        android:text="Atacar"
+                        android:id="@+id/buttonAttack" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -158,8 +209,8 @@
                     <Button
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:text="Potion"
-                        android:id="@+id/button4" />
+                        android:text="Poción"
+                        android:id="@+id/buttonPotion" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -179,8 +230,9 @@
                     <Button
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:text="Flee"
-                        android:id="@+id/button5" />
+                        android:text="POKEBALL"
+                        android:onClick="ThrowPokeball"
+                        android:id="@+id/buttonPokeball" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -192,8 +244,9 @@
                     <Button
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:text="PokeBall"
-                        android:id="@+id/button6" />
+                        android:text="HUIR"
+                        android:onClick="fleeBattle"
+                        android:id="@+id/buttonFlee" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

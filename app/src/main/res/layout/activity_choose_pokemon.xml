@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_pokemon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sammx343.probepokemongo.ChoosePokemon">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Elegir un Pokemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/elegirPokemon"
+            android:typeface="sans"
+            android:elevation="9dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="36sp"
+            android:textStyle="normal|bold" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="187dp"
+            android:layout_weight="0.99"
+            android:id="@+id/choosePokemonList" />
+
+        <Button
+            android:text="Atrás"
+            android:onClick="Atras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAtrasElegir"
+            android:layout_weight="0.08" />
+    </LinearLayout>
+</RelativeLayout>
